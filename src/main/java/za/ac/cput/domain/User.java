@@ -1,5 +1,12 @@
 package za.ac.cput.domain;
 
+/*
+ * User.java
+ * Entity for the User.java
+ * Author: Jesse Merold Hiebner (220357676)
+ * Date: 27/03/2023
+ */
+
 public class User
 {
     private int userID; //Primary Key
