@@ -1,4 +1,10 @@
 package za.ac.cput.repository;
+/*
+ * User.java
+ * Entity for the JobRepository.java
+ * Author: Tumelo Mzaca (206006330)
+ * Date: 28/03/2023
+ */
 
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
