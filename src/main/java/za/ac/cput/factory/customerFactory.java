@@ -1,7 +1,7 @@
 package za.ac.cput.factory;
 /*
  * User.java
- * Entity for the User.java
+ * Entity for the customerFactory.java
  * Author: Tumelo Mzaca (206006330)
  * Date: 27/03/2023
  */

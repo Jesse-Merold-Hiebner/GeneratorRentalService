@@ -1,16 +1,16 @@
 package za.ac.cput.domain;
 /*
  * User.java
- * Entity for the User.java
+ * Entity for the Job.java
  * Author: Tumelo Mzaca (206006330)
  * Date: 27/03/2023
  */
 import java.util.Objects;
 
 public class Job {
-    private String job_id;
+    private int job_id;
     private String job_title;
-    private String wage;
+    private int wage;
 
     //private constructor
     private Job(Builder builder){
@@ -20,7 +20,7 @@ public class Job {
     }
 
 
-    public String getJob_id() {
+    public Integer getJob_id() {
         return job_id;
     }
 
@@ -28,7 +28,7 @@ public class Job {
         return job_title;
     }
 
-    public String getWage() {
+    public Integer getWage() {
         return wage;
     }
 
@@ -37,7 +37,7 @@ public class Job {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Job job = (Job) o;
-        return job_id.equals(job.job_id) && job_title.equals(job.job_title) && wage.equals(job.wage) ;
+        return job_id == job.job_id && wage == job.wage && job_title.equals(job.job_title);
     }
 
     @Override
@@ -58,11 +58,11 @@ public class Job {
     //start the builder class
 
     public static class Builder{
-        private String job_id;
+        private Integer job_id;
         private String job_title;
-        private String wage;
+        private Integer wage;
 
-        public Builder setJob_id(String job_id) {
+        public Builder setJob_id(Integer job_id) {
             this.job_id = job_id;
             return this;
         }
@@ -72,7 +72,7 @@ public class Job {
             return this;
         }
 
-        public Builder setWage(String wage) {
+        public Builder setWage(Integer wage) {
             this.wage = wage;
             return this;
         }
