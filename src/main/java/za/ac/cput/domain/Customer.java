@@ -1,4 +1,10 @@
 package za.ac.cput.domain;
+/*
+ * User.java
+ * Entity for the User.java
+ * Author: Tumelo Mzaca (206006330)
+ * Date: 27/03/2023
+ */
 import java.util.Objects;
 
 public class Customer {

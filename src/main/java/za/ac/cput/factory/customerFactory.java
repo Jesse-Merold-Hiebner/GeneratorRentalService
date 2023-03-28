@@ -1,4 +1,10 @@
 package za.ac.cput.factory;
+/*
+ * User.java
+ * Entity for the User.java
+ * Author: Tumelo Mzaca (206006330)
+ * Date: 27/03/2023
+ */
 
 import za.ac.cput.domain.Customer;
 import za.ac.cput.Util.Helper;
