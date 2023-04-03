@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class customerFactoryTest {
     @Test
     public void testWithSuccess() {
-        Customer customer = customerFactory.creatCustomer("20230327", "12345", "0716352013", "Zmzaca@gmail.com");
+        Customer customer = customerFactory.creatCustomer(20230327, 12345, "0716352013", "Zmzaca@gmail.com");
         System.out.println(customer.toString());
         assertNotNull(customer);
 
@@ -22,7 +22,7 @@ class customerFactoryTest {
 
     @Test
     public void testWithFailure() {
-        Customer customer = customerFactory.creatCustomer("", "12345", "0716352013", "Zmzaca@gmail.com");
+        Customer customer = customerFactory.creatCustomer(20230327, 12345, "0716352013", "");
         System.out.println(customer.toString());
         assertNotNull(customer);
     }

@@ -1,7 +1,7 @@
 package za.ac.cput.repository;
 /*
  * User.java
- * Entity for the JobRepository.java
+ * Entity for the CustomerRepositoryTest.java
  * Author: Tumelo Mzaca (206006330)
  * Date: 28/03/2023
  */
@@ -9,32 +9,33 @@ package za.ac.cput.repository;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
+import za.ac.cput.domain.Customer;
 import za.ac.cput.domain.Job;
-import za.ac.cput.domain.User;
-import za.ac.cput.factory.UserFactory;
+import za.ac.cput.factory.customerFactory;
 import za.ac.cput.factory.jobFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 
-class JobRepositoryTest {
+class CustomerRepositoryTest {
 
-    private static JobRepository repository = JobRepository.getRepository();
-    private static Job job = jobFactory.createJob(1, "Cashier", 8600);
+
+    private static CustomerRepository repository = CustomerRepository.getRepository();
+    private static Customer customer = customerFactory.creatCustomer(001, 010, "0827642043", "Pmzaca@gmail.com");
 
     @Test
     void a_create()
     {
-        Job created = repository.create(job);
-        assertEquals(job.getJob_id(), created.getJob_id());
+        Customer created = repository.create(customer);
+        assertEquals(customer.getCustomer_id(), created.getCustomer_id());
         System.out.println("Create: " + created);
     }
 
     @Test
     void b_read()
     {
-        Job read = repository.read(job.getJob_id());
+        Customer read = repository.read(customer.getCustomer_id());
         assertNotNull(read);
         System.out.println("Read: " + read);
     }
@@ -42,10 +43,11 @@ class JobRepositoryTest {
     @Test
     void c_update()
     {
-        Job updated = new Job.Builder().copy(job).setJob_id(2)
-                .setJob_id(2)
-                .setJob_title("Assistant store manage")
-                .setWage(15600)
+        Customer updated = new Customer.Builder().copy(customer).setCustomer_id(2)
+                .setCustomer_id(201)
+                .setSales_id(02221)
+                .setCustomer_phoneNum("0848742053")
+                .setCustomer_email("Gmzaca@gmail.com")
                 .build();
         assertNotNull(repository.update(updated));
         System.out.println("Updated: " + updated);
@@ -54,7 +56,7 @@ class JobRepositoryTest {
     @Test
     void d_delete()
     {
-        boolean success = repository.delete(job.getJob_id());
+        boolean success = repository.delete(customer.getCustomer_id());
         assertTrue(success);
         System.out.println("Deleted: " + success);
     }
