@@ -17,4 +17,5 @@
 
 ### UML Diagram
 
+[GRS_UML_DIAGRAM.pdf](https://github.com/Jesse-Merold-Hiebner/ADPAssignment1/files/11161015/GRS_UML_DIAGRAM.pdf)
 
