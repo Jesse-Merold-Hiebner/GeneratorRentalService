@@ -53,6 +53,22 @@ public class Employee {
         this.contact_no = contact_no;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public Job getJob() {
+        return job;
+    }
+
+    public void setJob(Job job) {
+        this.job = job;
+    }
+
     public static class Builder{
         private long employeeId;
         private String firstName, lastName, contactNo;
