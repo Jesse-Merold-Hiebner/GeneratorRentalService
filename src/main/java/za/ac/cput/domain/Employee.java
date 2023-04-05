@@ -1,42 +1,42 @@
 package za.ac.cput.domain;
 
 public class Employee {
-    private long employeeID;
-    private String firstName;
-    private String lastName;
+    private long employee_id;
+    private String first_name;
+    private String last_name;
     private String contact_no;
 
     public Employee(){}
 
     public Employee(Builder builder){
-        this.employeeID = builder.employeeId;
-        this.firstName = builder.firstName;
-        this.lastName = builder.lastName;
+        this.employee_id = builder.employeeId;
+        this.first_name = builder.firstName;
+        this.last_name = builder.lastName;
         this.contact_no = builder.contactNo;
     }
 
-    public long getEmployeeID() {
-        return employeeID;
+    public long getEmployee_id() {
+        return employee_id;
     }
 
-    public void setEmployeeID(long employeeID) {
-        this.employeeID = employeeID;
+    public void setEmployee_id(long employee_id) {
+        this.employee_id = employee_id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirst_name() {
+        return first_name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLast_name() {
+        return last_name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
 
     public String getContact_no() {
@@ -72,9 +72,9 @@ public class Employee {
         }
 
         public Builder copy(Employee employee){
-            this.employeeId = employee.employeeID;
-            this.firstName = employee.firstName;
-            this.lastName = employee.lastName;
+            this.employeeId = employee.employee_id;
+            this.firstName = employee.first_name;
+            this.lastName = employee.last_name;
             this.contactNo = employee.contact_no;
             return this;
         }
