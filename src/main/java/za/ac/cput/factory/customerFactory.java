@@ -11,14 +11,25 @@ import za.ac.cput.Util.Helper;
 
 public class customerFactory {
 
-    public static Customer creatCustomer(String customer_id, String sales_id, String customer_phoneNum, String customer_email){
-        if(Helper.isNullorEmpty(customer_id)||Helper.isNullorEmpty(sales_id)){
+    public static Customer creatCustomer(Integer customer_id, Integer sales_id, String customer_phoneNum, String customer_email){
+        if (customer_id < 0)
             return null;
-        }
-        String Customer_phoneNum = Helper.generateId();
-        if(!Helper.isValidEmail(customer_email)){
+
+        if (sales_id < 0)
             return null;
-        }
+
+        if (customer_phoneNum.equals("") || customer_phoneNum == null)
+            return null;
+
+        if (customer_email.equals("") || customer_email == null)
+            return null;
+
+        if (!Helper.isValidEmail(customer_email))
+            return null;
+
+        if (Helper.isNullorEmpty(customer_phoneNum))
+            return null;
+
         Customer customer = new Customer.Builder()
                 .setCustomer_id(customer_id)
                 .setSales_id(sales_id)
