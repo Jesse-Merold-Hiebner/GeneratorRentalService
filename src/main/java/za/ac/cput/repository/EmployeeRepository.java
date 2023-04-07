@@ -36,7 +36,7 @@ public class EmployeeRepository implements IEmployeeRepository{
     @Override
     public Employee read(Long employeeId) {
         for (Employee e : db){
-            if (e.getEmployeeID() == employeeId){
+            if (e.getEmployee_id() == employeeId){
                 return e;
             }
         }
@@ -45,7 +45,7 @@ public class EmployeeRepository implements IEmployeeRepository{
 
     @Override
     public Employee update(Employee employee) {
-        Employee emp = read(employee.getEmployeeID());
+        Employee emp = read(employee.getEmployee_id());
         if (emp != null){
             db.remove(emp);
             db.add(employee);
