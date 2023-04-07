@@ -19,11 +19,9 @@ public class EmployeeFactory {
         if (Helper.isNullorEmpty(contactNo)){
             throw new IllegalArgumentException("Contact number is required!");
         }
-
         if (job == null){
             throw new IllegalArgumentException("Job is required!");
         }
-
         if (address == null){
             throw new IllegalArgumentException("Contact number is required!");
         }
