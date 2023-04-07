@@ -13,6 +13,22 @@ public class CalloutService {
         this.date_of_callout = builder.date_of_callout;
     }
 
+    public long getService_id() {
+        return service_id;
+    }
+
+    public void setService_id(long service_id) {
+        this.service_id = service_id;
+    }
+
+    public Date getDate_of_callout() {
+        return date_of_callout;
+    }
+
+    public void setDate_of_callout(Date date_of_callout) {
+        this.date_of_callout = date_of_callout;
+    }
+
     public static class Builder{
         private long service_id;
         private Date date_of_callout;
