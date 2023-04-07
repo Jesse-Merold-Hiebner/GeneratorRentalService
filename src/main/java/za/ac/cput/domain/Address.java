@@ -1,7 +1,7 @@
 package za.ac.cput.domain;
 
 /*
-Entity : Addrress.java
+Entity : Address.java
  Author: Mahad Hassan  (219122822)
 Date: 30/03/2023
  */
