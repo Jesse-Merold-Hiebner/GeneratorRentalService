@@ -1,15 +1,15 @@
 package za.ac.cput.domain;
 /*
  * User.java
- * Entity for the User.java
+ * Entity for the Customer.java
  * Author: Tumelo Mzaca (206006330)
  * Date: 27/03/2023
  */
 import java.util.Objects;
 
 public class Customer {
-    private String customer_id;
-    private String sales_id;
+    private int customer_id;
+    private int sales_id;
     private String customer_phoneNum;
     private String customer_email;
 
@@ -22,11 +22,11 @@ public class Customer {
     }
 
 
-    public String getCustomer_id() {
+    public Integer getCustomer_id() {
         return customer_id;
     }
 
-    public String getSales_id() {
+    public Integer getSales_id() {
         return sales_id;
     }
 
@@ -38,18 +38,20 @@ public class Customer {
         return customer_email;
     }
     //hasCode
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Customer customer = (Customer) o;
-        return customer_id.equals(customer.customer_id) && sales_id.equals(customer.sales_id) && customer_phoneNum.equals(customer.customer_phoneNum) && customer_email.equals(customer.customer_email);
+        return customer_id == customer.customer_id && sales_id == customer.sales_id && customer_phoneNum.equals(customer.customer_phoneNum) && customer_email.equals(customer.customer_email);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(customer_id, sales_id, customer_phoneNum, customer_email);
     }
+
 //toString
 
     @Override
@@ -64,17 +66,17 @@ public class Customer {
 
     //start of my builder class
     public static class Builder{
-        private String customer_id;
-        private String sales_id;
+        private Integer customer_id;
+        private Integer sales_id;
         private String customer_phoneNum;
         private String customer_email;
 
-        public Builder setCustomer_id(String customer_id) {
+        public Builder setCustomer_id(Integer customer_id) {
             this.customer_id = customer_id;
             return this;
         }
 
-        public Builder setSales_id(String sales_id) {
+        public Builder setSales_id(Integer sales_id) {
             this.sales_id = sales_id;
             return this;
         }

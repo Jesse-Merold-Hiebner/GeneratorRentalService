@@ -1,147 +1,123 @@
 package za.ac.cput.domain;
 
-/*
- * Employee.java
- * Entity for the Employee.java
- * Author: Jesse Merold Hiebner (220357676)
- * Date: 28/03/2023
- */
+import java.util.Set;
 
-public class Employee
-{
-    private int employeeID;
-    private String firstName;
-    private String lastName;
-    private String employeeAddress;
-    private String contactNumber;
-    private int jobID;
+public class Employee {
+    private long employee_id;
+    private String first_name;
+    private String last_name;
+    private String contact_no;
+    private Address address;
+    private Job job;
 
-    //insert private constructor here
-    private Employee(Builder builder)
-    {
-        this.employeeID = builder.employeeID;
-        this.firstName = builder.firstName;
-        this.lastName = builder.lastName;
-        this.employeeAddress = builder.employeeAddress;
-        this.contactNumber = builder.contactNumber;
-        this.jobID = builder.jobID;
+    public Employee(){}
+
+    public Employee(Builder builder){
+        this.employee_id = builder.employeeId;
+        this.first_name = builder.firstName;
+        this.last_name = builder.lastName;
+        this.contact_no = builder.contactNo;
+        this.job = builder.job;
+        this.address = builder.address;
     }
 
-    public int getEmployeeID() {
-        return employeeID;
+    public long getEmployee_id() {
+        return employee_id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public void setEmployee_id(long employee_id) {
+        this.employee_id = employee_id;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getFirst_name() {
+        return first_name;
     }
 
-    public String getEmployeeAddress() {
-        return employeeAddress;
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
     }
 
-    public String getContactNumber() {
-        return contactNumber;
+    public String getLast_name() {
+        return last_name;
     }
 
-    public int getJobID() {
-        return jobID;
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
 
-    public void setEmployeeID(int employeeID) {
-        this.employeeID = employeeID;
+    public String getContact_no() {
+        return contact_no;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setContact_no(String contact_no) {
+        this.contact_no = contact_no;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setEmployeeAddress(String employeeAddress) {
-        this.employeeAddress = employeeAddress;
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
-    public void setContactNumber(String contactNumber) {
-        this.contactNumber = contactNumber;
+    public Job getJob() {
+        return job;
     }
 
-    public void setJobID(int jobID) {
-        this.jobID = jobID;
+    public void setJob(Job job) {
+        this.job = job;
     }
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "employeeID=" + employeeID +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", employeeAddress='" + employeeAddress + '\'' +
-                ", contactNumber='" + contactNumber + '\'' +
-                ", jobID=" + jobID +
-                '}';
-    }
+    public static class Builder{
+        private long employeeId;
+        private String firstName, lastName, contactNo;
+        private Job job;
+        private Address address;
 
-    public static class Builder
-    {
-        private int employeeID;
-        private String firstName;
-        private String lastName;
-        private String employeeAddress;
-        private String contactNumber;
-        private int jobID;
-
-        public Builder setEmployeeID(int employeeID) {
-            this.employeeID = employeeID;
+        public Builder employeeId(long employeeId){
+            this.employeeId = employeeId;
             return this;
         }
 
-        public Builder setFirstName(String firstName) {
+        public Builder firstName(String firstName){
             this.firstName = firstName;
             return this;
         }
 
-        public Builder setLastName(String lastName) {
+        public Builder lastName(String lastName){
             this.lastName = lastName;
             return this;
         }
 
-        public Builder setEmployeeAddress(String employeeAddress) {
-            this.employeeAddress = employeeAddress;
+        public Builder contactNo(String contactNo){
+            this.contactNo = contactNo;
             return this;
         }
 
-        public Builder setContactNumber(String contactNumber) {
-            this.contactNumber = contactNumber;
+        public Builder job(Job job){
+            this.job = job;
             return this;
         }
 
-        public Builder setJobID(int jobID) {
-            this.jobID = jobID;
+        public Builder address(Address address){
+            this.address = address;
             return this;
         }
 
-        public Builder copy(Employee employee)
-        {
-            this.employeeID = employee.employeeID;
-            this.firstName = employee.lastName;
-            this.employeeAddress = employee.employeeAddress;
-            this.contactNumber = employee.contactNumber;
-            this.jobID = employee.jobID;
-
+        public Builder copy(Employee employee){
+            this.employeeId = employee.employee_id;
+            this.firstName = employee.first_name;
+            this.lastName = employee.last_name;
+            this.contactNo = employee.contact_no;
+            this.job = employee.job;
+            this.address = employee.address;
             return this;
         }
 
-        public Employee build()
-        {
+        public Employee build(){
             return new Employee(this);
         }
-
     }
 
 }
