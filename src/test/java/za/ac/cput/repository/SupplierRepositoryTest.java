@@ -1,5 +1,7 @@
 package za.ac.cput.repository;
 
+//Author: Adrian Bennett (214075982)
+
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Address;
 import za.ac.cput.domain.Supplier;

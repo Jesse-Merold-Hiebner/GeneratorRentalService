@@ -1,5 +1,7 @@
 package za.ac.cput.domain;
 
+//Author: Adrian Bennett (214075982)
+
 public class Product {
 
     private long product_id;
