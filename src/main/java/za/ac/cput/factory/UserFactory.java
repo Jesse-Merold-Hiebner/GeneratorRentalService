@@ -15,7 +15,7 @@ public class UserFactory
     public static User createUser(int userID, String userName, String userEmail, int employeeID)
     {
         if (userID < 0)
-             return null;
+            return null;
 
         if (userName.equals("") || userName == null)
             return null;
@@ -30,7 +30,7 @@ public class UserFactory
             return null;
 
 
-            return new User.Builder()
+        return new User.Builder()
                 .setUserID(userID)
                 .setUserName(userName)
                 .setUserEmail(userEmail)
