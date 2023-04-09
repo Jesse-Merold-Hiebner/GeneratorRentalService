@@ -1,5 +1,7 @@
 package za.ac.cput.factory;
 
+//Author: Lutho Nondala (219369399)
+
 import za.ac.cput.Util.Helper;
 import za.ac.cput.domain.Address;
 import za.ac.cput.domain.Employee;
@@ -19,11 +21,11 @@ public class EmployeeFactory {
         if (Helper.isNullorEmpty(contactNo)){
             throw new IllegalArgumentException("Contact number is required!");
         }
-        if (job == null){
-            throw new IllegalArgumentException("Job is required!");
-        }
         if (address == null){
             throw new IllegalArgumentException("Contact number is required!");
+        }
+        if (job == null){
+            throw new IllegalArgumentException("Job is required!");
         }
 
         return new Employee.Builder().employeeId(employeeId).firstName(firstName).lastName(lastName).contactNo(contactNo).address(address).job(job).build();
