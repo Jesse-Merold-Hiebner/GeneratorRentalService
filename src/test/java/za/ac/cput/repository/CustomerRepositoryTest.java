@@ -10,9 +10,7 @@ import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.Customer;
-import za.ac.cput.domain.Job;
-import za.ac.cput.factory.customerFactory;
-import za.ac.cput.factory.jobFactory;
+import za.ac.cput.factory.CustomerFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -22,7 +20,7 @@ class CustomerRepositoryTest {
 
 
     private static CustomerRepository repository = CustomerRepository.getRepository();
-    private static Customer customer = customerFactory.creatCustomer(001, 010, "0827642043", "Pmzaca@gmail.com");
+    private static Customer customer = CustomerFactory.creatCustomer(001, 010, "0827642043", "Pmzaca@gmail.com");
 
     @Test
     void a_create()

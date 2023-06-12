@@ -10,9 +10,7 @@ import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import za.ac.cput.domain.Job;
-import za.ac.cput.domain.User;
-import za.ac.cput.factory.UserFactory;
-import za.ac.cput.factory.jobFactory;
+import za.ac.cput.factory.JobFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -21,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class JobRepositoryTest {
 
     private static JobRepository repository = JobRepository.getRepository();
-    private static Job job = jobFactory.createJob(1, "Cashier", 8600);
+    private static Job job = JobFactory.createJob(1, "Cashier", 8600);
 
     @Test
     void a_create()

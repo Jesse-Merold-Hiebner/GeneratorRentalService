@@ -9,14 +9,14 @@ class jobFactoryTest {
 
     @Test
     public void testWithSuccess() {
-        Job job = jobFactory.createJob(01, "Manage", 10500);
+        Job job = JobFactory.createJob(01, "Manage", 10500);
         System.out.println(job.toString());
         assertNotNull(job);
     }
 
     @Test
     public void testWithFailure(){
-        Job job = jobFactory.createJob(01, "", 10500);
+        Job job = JobFactory.createJob(01, "", 10500);
         System.out.println(job.toString());
         assertNotNull(job);
     }

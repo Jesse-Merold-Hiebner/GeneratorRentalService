@@ -8,7 +8,7 @@ import za.ac.cput.domain.Employee;
 import za.ac.cput.domain.Job;
 import za.ac.cput.factory.AddressFactory;
 import za.ac.cput.factory.EmployeeFactory;
-import za.ac.cput.factory.jobFactory;
+import za.ac.cput.factory.JobFactory;
 
 import java.util.Set;
 
@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class EmployeeRepositoryTest {
     private static EmployeeRepository REPOSITORY = EmployeeRepository.getRepository();;
     private static Address address = AddressFactory.createAddresss("Loop Street", "5", "5624", "NukeTown", "1");
-    private static Job job = jobFactory.createJob(1, "Cashier", 5000);
+    private static Job job = JobFactory.createJob(1, "Cashier", 5000);
     private static Employee employee = EmployeeFactory.build(1, "John", "Doe","0752587542", address, job);
 
     @Test
